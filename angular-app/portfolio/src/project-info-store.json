@@ -1,0 +1,66 @@
+{
+    "projectsInfos":[
+        {
+            "name":"Relax Massage Ritzing",
+            "description":"An SPA (Single Page Application) using Next.Js created for my sisters' husband. This was my first time using Next.Js, you can visit this website under: <a href='https://relaxmassageritzing.vercel.app/'>https://relaxmassageritzing.vercel.app/</a>",
+            "gitHubLink":"https://github.com/Light2027/relaxmassageritzing",
+            "images":[
+                {
+                    "description":"",
+                    "source":"assets/projects/relaxmassageritzing/"
+                },
+                {
+                    "description":"",
+                    "source":"assets/projects/relaxmassageritzing/"
+                },
+                {
+                    "description":"",
+                    "source":"assets/projects/relaxmassageritzing/"
+                }
+            ],
+            "technologies":[
+                {
+                    "name":"Next.Js",
+                    "logo":{
+                        "description":"Next.js is a developer friendly React.Js framework.",
+                        "source":"assets/technologies/next.logo.svg"
+                    }
+                },
+                {
+                    "name":"React.Js",
+                    "logo":{
+                        "description":"Next.js is a developer friendly React.Js framework.",
+                        "source":"assets/technologies/react.logo.svg"
+                    }
+                },
+                {
+                    "name":"React.Js Bootstrap",
+                    "logo":{
+                        "description":"Bootstrap framework for React.Js projects.",
+                        "source":"assets/technologies/reactBootstrap.logo.svg"
+                    }
+                }
+            ]
+        }
+    ],
+    "projectInfoTemplate":{
+        "name":"",
+        "description":"",
+        "gitHubLink":"",
+        "images":[
+            {
+                "description":"",
+                "source":""
+            }
+        ],
+        "technologies":[
+            {
+                "name":"",
+                "logo":{
+                    "description":"",
+                    "source":""
+                }
+            }
+        ]
+    }
+}

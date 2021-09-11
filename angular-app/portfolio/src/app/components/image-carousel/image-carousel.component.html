@@ -1,0 +1,25 @@
+<div id="{{this.carouselId}}" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button *ngFor="let image of this.images; let i = index" 
+      [attr.data-index]="i" 
+      type="button" 
+      attr.data-bs-target="#{{this.carouselId}}" 
+      attr.data-bs-slide-to="{{i}}" 
+      class="{{i === 0 ? 'active' : ''}}" 
+      attr.aria-current="{{i === 0 ? 'true' : 'false'}}" 
+      attr.aria-label="Slide {{i}}"></button>
+    </div>
+    <div class="carousel-inner">
+      <div *ngFor="let image of this.images; let i = index" [attr.data-index]="i" class="carousel-item {{i === 0 ? 'active' : ''}}">
+        <img src="{{image.source}}" class="d-block w-100" alt="{{image.description}}" (click)="onCarouselImageClicked(image.source)">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" attr.data-bs-target="#{{this.carouselId}}" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" attr.data-bs-target="#{{this.carouselId}}" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
