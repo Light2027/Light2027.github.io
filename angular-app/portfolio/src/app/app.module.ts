@@ -1,4 +1,4 @@
-import * as projectInfoStore from "../project-info-store.json";
+import projectInfoStore from "../project-info-store.json";
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
