@@ -1,5 +1,5 @@
-export interface LocalizationService {
-    setLanguage(language:string) : void;
-    getLanguage() : string;
-    getTranslation(key : string) : string;
+export abstract class LocalizationService {
+    public abstract setLanguage(language:string) : void;
+    public abstract getLanguage() : string;
+    public abstract getTranslation(key : string) : string;
 }

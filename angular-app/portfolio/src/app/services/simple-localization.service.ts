@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
 import { LocalizationService } from './localization-service.interface';
+import { Translation } from '../models/translation';
 
 @Injectable({
   providedIn: 'root'
 })
-export class SimpleLocalizationService implements LocalizationService {
+export class SimpleLocalizationService extends LocalizationService {
 
-  constructor() { }
+  constructor(translations : Array<Translation>) 
+  { 
+    super();
+  }
 
   setLanguage(language: string): void 
   {

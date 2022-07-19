@@ -1,4 +1,5 @@
-import projectInfoStore from "../project-info-store.json";
+import projectInfoStore from "../assets/project-info-store.json";
+import translations from "../assets/translations.json";
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -17,6 +18,10 @@ import { ProjectInfo } from "./models/project-info";
 import { ProjectInfoService } from "./services/project-info-service.interface";
 import { LocalProjectInfoService } from "./services/local-project-info.service";
 
+import { Translation } from "./models/translation";
+import { SimpleLocalizationService } from "./services/simple-localization.service";
+import { LocalizationService } from "./services/localization-service.interface";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +38,16 @@ import { LocalProjectInfoService } from "./services/local-project-info.service";
     AppRoutingModule
   ],
   providers: [
-    {provide: ProjectInfoService, useExisting: LocalProjectInfoService, useValue: new LocalProjectInfoService(<Array<ProjectInfo>>projectInfoStore.projectsInfos)}
+    {
+      provide: ProjectInfoService, 
+      useExisting: LocalProjectInfoService, 
+      useValue: new LocalProjectInfoService(<Array<ProjectInfo>>projectInfoStore.projectsInfos)
+    },
+    {
+      provide: LocalizationService, 
+      useExisting: SimpleLocalizationService, 
+      useValue: new SimpleLocalizationService(translations.map(x => new Translation(x.key, new Map<string, string>(Object.entries(x.translations)))))
+    }
   ],
   bootstrap: [AppComponent]
 })
