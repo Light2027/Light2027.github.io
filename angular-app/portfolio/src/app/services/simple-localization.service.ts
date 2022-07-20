@@ -6,24 +6,31 @@ import { Translation } from '../models/translation';
   providedIn: 'root'
 })
 export class SimpleLocalizationService extends LocalizationService {
+  private translations : Map<string, Translation>;
+  private language : string;
 
-  constructor(translations : Array<Translation>) 
+  constructor(private translations2 : Array<Translation>) 
   { 
     super();
+    this.translations = new Map<string, Translation>(translations2.map(x => [ x.key, x ]));
+    this.language = "en";
   }
 
-  setLanguage(language: string): void 
+  public setLanguage(language: string): void 
   {
-    throw new Error('Method not implemented.');
+    this.language = language;
   }
   
-  getLanguage(): string 
+  public getLanguage(): string 
   {
-    throw new Error('Method not implemented.');
+    return this.language;
   }
 
-  getTranslation(key: string): string 
+  public getTranslation(key: string): string | undefined
   {
-    throw new Error('Method not implemented.');
+    console.log(JSON.stringify(this.translations));
+    console.log(JSON.stringify(this.translations2)); // TODO: Turning arrays and objects into maps fails.
+
+    return this.translations.get(this.language)?.translations?.get(key);
   }
 }
