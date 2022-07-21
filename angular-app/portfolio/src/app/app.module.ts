@@ -46,7 +46,15 @@ import { LocalizationService } from "./services/localization-service.interface";
     {
       provide: LocalizationService, 
       useExisting: SimpleLocalizationService, 
-      useValue: new SimpleLocalizationService(translations.map(x => new Translation(x.key, new Map<string, string>(Object.entries(x.translations)))))
+      useValue: new SimpleLocalizationService(translations.map(x => { 
+        let map = new Map<string, string>();
+        Object.entries(x.translations).forEach(x => {
+          console.log(`Key: ${x[0]}; Value: ${x[1]}`);
+          map = map.set(x[0], x[1]);
+          console.log(JSON.stringify(map.set(x[0], x[1]))); // The Map class simply doesn't work...
+        });
+        return new Translation(x.key, map); 
+      }))
     }
   ],
   bootstrap: [AppComponent]
