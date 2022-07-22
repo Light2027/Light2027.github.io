@@ -18,6 +18,7 @@ import { ProjectInfo } from "./models/project-info";
 import { ProjectInfoService } from "./services/project-info-service.interface";
 import { LocalProjectInfoService } from "./services/local-project-info.service";
 
+import {Dictionary} from "typescript-collections";
 import { Translation } from "./models/translation";
 import { SimpleLocalizationService } from "./services/simple-localization.service";
 import { LocalizationService } from "./services/localization-service.interface";
@@ -46,14 +47,12 @@ import { LocalizationService } from "./services/localization-service.interface";
     {
       provide: LocalizationService, 
       useExisting: SimpleLocalizationService, 
-      useValue: new SimpleLocalizationService(translations.map(x => { 
-        let map = new Map<string, string>();
-        Object.entries(x.translations).forEach(x => {
-          console.log(`Key: ${x[0]}; Value: ${x[1]}`);
-          map = map.set(x[0], x[1]);
-          console.log(JSON.stringify(map.set(x[0], x[1]))); // The Map class simply doesn't work...
-        });
-        return new Translation(x.key, map); 
+      useValue: new SimpleLocalizationService(translations.map(x => {
+        let dic = new Dictionary<string, string>(x => x);
+
+        Object.entries(x.translations).forEach(y => dic.setValue(y[0], y[1]));
+
+        return new Translation(x.key, dic);
       }))
     }
   ],

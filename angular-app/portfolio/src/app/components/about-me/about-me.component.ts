@@ -18,8 +18,5 @@ export class AboutMeComponent implements OnInit {
     const currentLanguage = this.ls.getLanguage();
     let newLanguage = currentLanguage === "en" ? "de" : "en";
     this.ls.setLanguage(newLanguage);
-    console.log("Hello World");
-    console.log(`${currentLanguage} => ${newLanguage}`);
-    console.log(this.ls.getTranslation("key_Sample"))
   }
 }
