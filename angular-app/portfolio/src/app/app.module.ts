@@ -22,6 +22,7 @@ import {Dictionary} from "typescript-collections";
 import { Translation } from "./models/translation";
 import { SimpleLocalizationService } from "./services/simple-localization.service";
 import { LocalizationService } from "./services/localization-service.interface";
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { LocalizationService } from "./services/localization-service.interface";
     ImageCarouselComponent,
     ProjectInfoComponent,
     TechnologyBoardComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
