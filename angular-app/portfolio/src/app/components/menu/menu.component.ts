@@ -15,7 +15,6 @@ export class MenuComponent implements OnInit {
   }
 
   public onLanguageChanged(event : any){
-    console.log(event.target.value);
     this.language = event.target.value;
     this.ls.setLanguage(this.language);
   }

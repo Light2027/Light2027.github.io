@@ -10,19 +10,8 @@
 
     <div class="col-md order-last">
       <p class="text-dark text-large text-crimson">
-        Hello, my name is Galfi Istvan. I am currently doing my master's degree
-        in computer science at the Fachhochschule Wiener Neustadt. I am also
-        working for Seltec Gmbh part-time. There I mainly work with C# and
-        Blazor in the .NET environment. Still, I am also familiar with many
-        other languages and technologies. See my hobby projects below. I currently use my skills,
-        and passion for software development to expand and maintain Seltec's
-        La.Net 3 platform.
+        {{ls.getTranslation("key_AboutMe")}}
       </p>
-
-      <p>
-        {{this.ls.getTranslation("key_Sample")}}
-      </p>
-      <button (click)="toggleLanguage()">Toggle Language</button>
 
       <div class="d-flex flex-row justify-content-around mt-5">
         <a
@@ -86,7 +75,7 @@
               d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"
             />
           </svg>
-          Get my CV
+          {{ls.getTranslation("key_GetMyCV")}}
         </a>
       </div>
     </div>

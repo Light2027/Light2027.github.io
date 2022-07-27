@@ -5,5 +5,61 @@
             "de": "Muster",
             "en": "Sample"
         }
+    },
+    {
+        "key": "key_MenuAboutMe",
+        "translations":{
+            "de": "Über mich",
+            "en": "About me"
+        }
+    },
+    {
+        "key": "key_MenuMyWorks",
+        "translations":{
+            "de": "Meine Werke",
+            "en": "My works"
+        }
+    },
+    {
+        "key": "key_AboutMe",
+        "translations":{
+            "de": "Hallo, mein Name ist Galfi Istvan. Zurzeit mache ich meinen Master in Informatik auf der Fachhochschule Wiener Neustadt. Ich arbeite nebenbei bei der Seltec GmbH in Teilzeit. Dort arbeite ich hauptsächlich mit C# und Blazor in der .NET Umgebung. Ich bin jedoch mit vielen anderen Sprachen und Technologien vertraut. Sehe meine Hobbyprojekte unten. Zurzeit verwende ich meine Fähigkeiten und Leidenschaft für Softwareentwicklung, um Seltecs La.Net 3 Plattform zu erweitern und zu warten.",
+            "en": "Hello, my name is Galfi Istvan. I am currently doing my master's degree in computer science at the Fachhochschule Wiener Neustadt. I am also working for Seltec GmbH part-time. There I mainly work with C# and Blazor in the .NET environment. Still, I am also familiar with many other languages and technologies. See my hobby projects below. I currently use my skills, and passion for software development to expand and maintain Seltec's La.Net 3 platform."
+        }
+    },
+    {
+        "key": "key_GetMyCV",
+        "translations":{
+            "de": "Meinen Lebenslauf",
+            "en": "Get my CV"
+        }
+    },
+    {
+        "key": "key_MyWorks",
+        "translations":{
+            "de": "Meine Werke",
+            "en": "My works"
+        }
+    },
+    {
+        "key": "key_ComingSoon",
+        "translations":{
+            "de": "Bald...",
+            "en": "Coming soon..."
+        }
+    },
+    {
+        "key": "key_Welcome",
+        "translations":{
+            "de": "Willkommen auf meinem Portfolio",
+            "en": "Welcome to my Portfolio"
+        }
+    },
+    {
+        "key": "key_ScrollDownPlea",
+        "translations":{
+            "de": "Bitte <br/>scrollen <br/>Sie<br/> herunter",
+            "en": "Please <br />scroll <br />down <br />to see <br />more <br />"
+        }
     }
 ]
