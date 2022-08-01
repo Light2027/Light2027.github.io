@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Image } from 'src/app/models/image';
 import { ProjectInfo } from 'src/app/models/project-info';
 import { Technology } from 'src/app/models/technology';
+import { LocalizationService } from 'src/app/services/localization-service.interface';
 import { ProjectInfoService } from 'src/app/services/project-info-service.interface';
 
 @Component({
@@ -12,7 +13,7 @@ import { ProjectInfoService } from 'src/app/services/project-info-service.interf
 export class ProjectsComponent implements OnInit {
   public projects:Array<ProjectInfo> = [];
 
-  constructor(private projectInfoService:ProjectInfoService) { }
+  constructor(private projectInfoService:ProjectInfoService, public ls : LocalizationService) { }
 
   ngOnInit(): void {
     this.projectInfoService.getProjectInfos().forEach(p => this.projects.push(p));

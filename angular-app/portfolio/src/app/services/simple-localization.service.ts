@@ -1,29 +1,35 @@
 import { Injectable } from '@angular/core';
 import { LocalizationService } from './localization-service.interface';
 import { Translation } from '../models/translation';
+import { Dictionary } from 'typescript-collections';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SimpleLocalizationService extends LocalizationService {
+  private translations : Dictionary<string, Translation>;
+  private language : string;
 
-  constructor(translations : Array<Translation>) 
+  constructor(private translations2 : Array<Translation>) 
   { 
     super();
+    this.translations = new Dictionary<string, Translation>(x => x);
+    translations2.forEach(x => this.translations.setValue(x.key, x));
+    this.language = "en";
   }
 
-  setLanguage(language: string): void 
+  public setLanguage(language: string): void 
   {
-    throw new Error('Method not implemented.');
+    this.language = language;
   }
   
-  getLanguage(): string 
+  public getLanguage(): string 
   {
-    throw new Error('Method not implemented.');
+    return this.language;
   }
 
-  getTranslation(key: string): string 
+  public getTranslation(key: string): string | undefined
   {
-    throw new Error('Method not implemented.');
+    return this.translations.getValue(key)?.translations?.getValue(this.language);
   }
 }

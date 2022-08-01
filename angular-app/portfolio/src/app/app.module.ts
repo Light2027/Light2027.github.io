@@ -18,9 +18,11 @@ import { ProjectInfo } from "./models/project-info";
 import { ProjectInfoService } from "./services/project-info-service.interface";
 import { LocalProjectInfoService } from "./services/local-project-info.service";
 
+import {Dictionary} from "typescript-collections";
 import { Translation } from "./models/translation";
 import { SimpleLocalizationService } from "./services/simple-localization.service";
 import { LocalizationService } from "./services/localization-service.interface";
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { LocalizationService } from "./services/localization-service.interface";
     ImageCarouselComponent,
     ProjectInfoComponent,
     TechnologyBoardComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,13 @@ import { LocalizationService } from "./services/localization-service.interface";
     {
       provide: LocalizationService, 
       useExisting: SimpleLocalizationService, 
-      useValue: new SimpleLocalizationService(translations.map(x => new Translation(x.key, new Map<string, string>(Object.entries(x.translations)))))
+      useValue: new SimpleLocalizationService(translations.map(x => {
+        let dic = new Dictionary<string, string>(x => x);
+
+        Object.entries(x.translations).forEach(y => dic.setValue(y[0], y[1]));
+
+        return new Translation(x.key, dic);
+      }))
     }
   ],
   bootstrap: [AppComponent]

@@ -3,7 +3,7 @@
 
     <div class="d-flex justify-content-center my-5 text-dancing">
         <h1 class="welcome-text text-fancy text-light">
-            Welcome to my Portfolio
+            {{ls.getTranslation("key_Welcome")}}
         </h1>
     </div>
 
@@ -12,11 +12,7 @@
     <div class="d-flex flex-column flex-nowrap align-items-center my-5">
         <div class="down-arrow-body">
             <p class="text-fancy text-dancing text-large text-light text-center pt-3">
-                Please <br />
-                scroll <br />
-                down <br />
-                to see <br />
-                more <br />
+                <span [innerHtml]='ls.getTranslation("key_ScrollDownPlea")'></span>
             </p>
         </div>
         <div class="down-arrow-head"></div>

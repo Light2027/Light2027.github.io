@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalizationService } from 'src/app/services/localization-service.interface';
 
 @Component({
   selector: 'app-about-me',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutMeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public ls : LocalizationService) { 
+  }
 
   ngOnInit(): void {
   }
 
+  public toggleLanguage() : void{
+    const currentLanguage = this.ls.getLanguage();
+    let newLanguage = currentLanguage === "en" ? "de" : "en";
+    this.ls.setLanguage(newLanguage);
+  }
 }
