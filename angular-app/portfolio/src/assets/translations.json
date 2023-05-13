@@ -23,8 +23,8 @@
     {
         "key": "key_AboutMe",
         "translations":{
-            "de": "Hallo, mein Name ist Galfi Istvan. Zurzeit mache ich meinen Master in Informatik auf der Fachhochschule Wiener Neustadt. Ich arbeite nebenbei bei der Seltec GmbH in Teilzeit. Dort arbeite ich hauptsächlich mit C# und Blazor in der .NET Umgebung. Ich bin jedoch mit vielen anderen Sprachen und Technologien vertraut. Sehe meine Hobbyprojekte unten. Zurzeit verwende ich meine Fähigkeiten und Leidenschaft für Softwareentwicklung, um Seltecs La.Net 3 Plattform zu erweitern und zu warten.",
-            "en": "Hello, my name is Galfi Istvan. I am currently doing my master's degree in computer science at the Fachhochschule Wiener Neustadt. I am also working for Seltec GmbH part-time. There I mainly work with C# and Blazor in the .NET environment. Still, I am also familiar with many other languages and technologies. See my hobby projects below. I currently use my skills, and passion for software development to expand and maintain Seltec's La.Net 3 platform."
+            "de": "Hallo, mein Name ist Galfi Istvan. Zurzeit arbeite ich bei der Seltec GmbH in Vollzeit. Dort arbeite ich hauptsächlich mit C# und Blazor in der .NET Umgebung. Ich bin jedoch mit vielen anderen Sprachen und Technologien vertraut. Sehe meine Hobbyprojekte unten. Zurzeit verwende ich meine Fähigkeiten und Leidenschaft für Softwareentwicklung, um Seltecs La.Net 3 Plattform zu erweitern und zu warten.",
+            "en": "Hello, my name is Galfi Istvan. I am currently working for Seltec GmbH full-time. There I mainly work with C# and Blazor in the .NET environment. Still, I am also familiar with many other languages and technologies. See my hobby projects below. I currently use my skills, and passion for software development to expand and maintain Seltec's La.Net 3 platform."
         }
     },
     {
